@@ -1,0 +1,8 @@
+<h2 id="app-title">Some Agular App</h2>
+<nav>
+	<button id="header-button-home" *ngIf="!isHomePage()" mat-raised-button color="primary" routerLink="/">Home</button>
+	<button id="header-button-go-to-items" *ngIf="isHomePage()" mat-raised-button color="primary" routerLink="/items">Go to Items</button>
+	<button id="header-button-back-to-items" *ngIf="isDetailsPage()" mat-raised-button color="primary" routerLink="/items">Back to Items</button>
+</nav>
+<router-outlet></router-outlet>
+

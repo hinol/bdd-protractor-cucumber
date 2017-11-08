@@ -1,0 +1,8 @@
+<h1 id="items-title">
+  Colors list
+</h1>
+<app-list-item
+  id="{{ 'list-item-' + color.color }}"
+  *ngFor="let color of colors | async"
+  [item]="color"
+  (deleteItemEvent)="handleDeleteItem($event)"></app-list-item>

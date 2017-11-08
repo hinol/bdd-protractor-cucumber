@@ -1,0 +1,20 @@
+<h2
+  id="delete-dialog-title"
+  mat-dialog-title
+>Delete color</h2>
+<mat-dialog-content>Do you really want to delete color {{ data.name }}</mat-dialog-content>
+<mat-dialog-actions>
+  <button
+    mat-raised-button
+    color="accent"
+    [mat-dialog-close]="null">No
+  </button>
+  <button
+    id="confirm-delete-button"
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="data.name">Yes
+  </button>
+</mat-dialog-actions>
+
+

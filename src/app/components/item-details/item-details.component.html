@@ -1,0 +1,28 @@
+<h1 id="details-title">
+  Colors list
+</h1>
+<mat-card
+  id="{{ 'item-details-' + item.color }}"
+  class="example-card"
+  [style.margin.px]="10"
+  [style.background-color]="item.color"
+  [style.color]="item.color === 'black' ? 'white' : 'black'"
+>
+  <mat-card-title>
+    {{ item.color }}
+  </mat-card-title>
+  <mat-card-content *ngIf="shouldShowDetails()">
+    <div>
+      RGBA:
+      <p>
+        {{ item.code.rgba.join(', ') }}
+      </p>
+    </div>
+    <div>
+      HEX:
+      <p>
+        {{ item.code.hex }}
+      </p>
+    </div>
+  </mat-card-content>
+</mat-card>
